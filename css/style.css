@@ -1,3 +1,16 @@
 .accordion-body {
     display:block;
 }
+
+/* Estilos personalizados para el footer */
+.footer-logo {
+    font-size: 24px;
+    color: #333;
+}
+.footer-logo:hover {
+    color: #007bff;
+}
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
