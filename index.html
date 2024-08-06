@@ -3,48 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía para Curso de Desarrollo Web</title>
-    <!-- Bootstrap CSS -->
+    <title>Guía para Curso de Desarrollo Web - Accesibilidad y Organización</title>
+    <!-- Bootstrap CSS y estilos-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="container mt-4">
         <h1>Guía para Curso de Desarrollo Web</h1>
+        <p>Bienvenidos al bootcamp de desarrollo web fullstack. En esta guía, exploraremos aspectos esenciales sobre accesibilidad, organización de proyectos web y soluciones a problemas comunes. Esta información es crucial para desarrollar proyectos web efectivos y accesibles.</p>
+        
+        <h2>Temas Cubiertos</h2>
         <div class="accordion" id="accordionExample">
+            <!-- Accesibilidad en la Web -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Publicación 1: Definición de HTML
+                        Accesibilidad en la Web
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        HTML (HyperText Markup Language) es el lenguaje de marcado estándar para documentos diseñados para ser mostrados en un navegador web. HTML describe la estructura de las páginas web usando una serie de elementos y etiquetas.
+                        La accesibilidad web se refiere a la práctica de diseñar y desarrollar sitios web que sean utilizables por personas con diversas discapacidades. Esto incluye a personas con discapacidades visuales, auditivas, motoras o cognitivas. Implementar buenas prácticas de accesibilidad no solo ayuda a usuarios con discapacidades, sino que también mejora la experiencia de todos los usuarios.
+
+                        <p><strong>Ejemplo de código:</strong></p>
+                        <pre><code>&lt;button aria-label="Cerrar" onclick="cerrarVentana()"&gt;X&lt;/button&gt;</code></pre>
+                        <p>El atributo <code>aria-label</code> proporciona una descripción accesible para el botón que no tiene texto visible.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Atributo alt -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Publicación 2: Introducción a CSS
+                        El Atributo alt
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        CSS (Cascading Style Sheets) es un lenguaje de hojas de estilo usado para describir la presentación de un documento escrito en HTML. CSS controla la apariencia de los elementos en una página web, incluyendo colores, fuentes, y el diseño general.
+                        El atributo <code>alt</code> en una etiqueta <code>&lt;img&gt;</code> proporciona una descripción alternativa de la imagen que se mostrará si la imagen no se puede cargar. Además, esta descripción es leída por lectores de pantalla para usuarios con discapacidad visual.
+
+                        <p><strong>Ejemplo de código:</strong></p>
+                        <pre><code>&lt;img src="logo.png" alt="Logo de la empresa" /&gt;</code></pre>
+                        <p>En este ejemplo, si la imagen "logo.png" no se carga, el texto "Logo de la empresa" será mostrado como alternativa.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Organización de carpetas para proyecto -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Publicación 3: JavaScript para Principiantes
+                        Organización de Carpetas para Proyecto
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        JavaScript es un lenguaje de programación que permite agregar interactividad a las páginas web. Con JavaScript, puedes realizar tareas como validar formularios, crear animaciones, y manipular el contenido de la página de manera dinámica.
+                        Mantener una estructura de carpetas organizada es esencial para el desarrollo web eficiente. Una estructura clara facilita el mantenimiento y la colaboración en proyectos. A continuación se muestra una estructura de carpetas recomendada:
+
+                        <p><strong>Ejemplo de estructura de carpetas:</strong></p>
+                        <pre><code>
+proyecto/
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── scripts.js
+├── img/
+│   └── logo.png
+└── fonts/
+    └── custom-font.ttf
+                        </code></pre>
+                        <p>En este ejemplo, <code>css/</code> contiene los archivos de estilos, <code>js/</code> los archivos de JavaScript, <code>img/</code> las imágenes, y <code>fonts/</code> las fuentes personalizadas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Importancia de Contrastres -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Importancia de los Contrastres
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Los contrastes adecuados entre texto y fondo son esenciales para la legibilidad y la accesibilidad. Un contraste insuficiente puede dificultar la lectura para personas con deficiencias visuales y otros problemas de visión.
+
+                        <p><strong>Ejemplo de código:</strong></p>
+                        <pre><code>
+/* Fondo oscuro con texto claro */
+body {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+/* Fondo claro con texto oscuro */
+header {
+    background-color: #f9f9f9;
+    color: #333;
+}
+                        </code></pre>
+                        <p>En el ejemplo, se utiliza un fondo oscuro con texto claro para mejorar la legibilidad en la mayoría de las situaciones. Es importante verificar el contraste con herramientas de validación de accesibilidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Importancia del uso de un lector -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Importancia del Uso de un Lector de Pantalla (Ej. NVDA)
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Los lectores de pantalla como NVDA (NonVisual Desktop Access) permiten a personas con discapacidades visuales navegar por la web leyendo el contenido en voz alta. Es fundamental probar los sitios web con lectores de pantalla para asegurar que la información se presenta de manera accesible.
+
+                        <p><strong>Ejemplo de prueba:</strong></p>
+                        <p>Usa NVDA o cualquier otro lector de pantalla para verificar que todos los elementos interactivos como botones y enlaces sean descritos correctamente y que el contenido sea legible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uso de JavaScript para validar formularios -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Uso de JavaScript para Validar Datos de Formularios
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        JavaScript se utiliza para validar datos de formularios antes de que sean enviados al servidor. Esto mejora la experiencia del usuario al proporcionar retroalimentación instantánea sobre errores en el formulario.
+
+                        <p><strong>Ejemplo de código:</strong></p>
+                        <pre><code>
+document.getElementById('miFormulario').addEventListener('submit', function(event) {
+    var nombre = document.getElementById('nombre').value;
+    if (nombre === '') {
+        alert('El nombre es obligatorio.');
+        event.preventDefault(); // Evita que el formulario se envíe
+    }
+});
+                        </code></pre>
+                        <p>En este ejemplo, el formulario no se enviará si el campo "nombre" está vacío, y el usuario verá una alerta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uso de etiquetas semánticas HTML5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Uso de Etiquetas Semánticas en HTML5
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Las etiquetas semánticas en HTML5 (como <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, y <code>&lt;section&gt;</code>) proporcionan significado adicional al contenido de la página, lo que mejora la accesibilidad y el SEO.
+
+                        <p><strong>Ejemplo de código:</strong></p>
+                        <pre><code>
+&lt;header&gt;
+    &lt;h1&gt;Título del Sitio&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Sección Principal&lt;/h2&gt;
+        &lt;p&gt;Contenido de la sección.&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Derechos reservados&lt;/p&gt;
+&lt;/footer&gt;
+                        </code></pre>
+                        <p>En este ejemplo, se usan etiquetas semánticas para estructurar el contenido de manera clara y accesible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uso de Bootstrap -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Uso de Bootstrap
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Bootstrap es un framework CSS que facilita el diseño de páginas web responsivas y con un aspecto profesional. Ofrece una amplia gama de componentes y utilidades para estilizar y estructurar tu sitio web de manera rápida y eficiente.
+
+                        <p><strong>Ejemplo de código:</strong></p>
+                        <pre><code>
+&lt;button class="btn btn-primary"&gt;Botón Primario&lt;/button&gt;
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;Columna 1&lt;/div&gt;
+        &lt;div class="col"&gt;Columna 2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+                        <p>En este ejemplo, se utiliza el componente de botón y el sistema de rejilla de Bootstrap para crear un diseño simple.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uso de Git -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        Uso de Git
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Git es un sistema de control de versiones distribuido que permite gestionar el historial de cambios en un proyecto. Usar Git facilita la colaboración y el mantenimiento del código a lo largo del tiempo.
+
+                        <p><strong>Ejemplo de comandos básicos:</strong></p>
+                        <pre><code>
+# Inicializar un nuevo repositorio
+git init
+
+# Añadir archivos al área de preparación
+git add archivo.txt
+
+# Realizar un commit
+git commit -m "Mensaje del commit"
+
+# Clonar un repositorio existente
+git clone https://github.com/usuario/repositorio.git
+                        </code></pre>
+                        <p>Estos comandos te permiten comenzar a usar Git, gestionar tus archivos y colaborar en proyectos con otros desarrolladores.</p>
                     </div>
                 </div>
             </div>
@@ -53,5 +252,6 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
