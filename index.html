@@ -371,7 +371,7 @@
                 </div>
             </div>
 
-            <!-- Uso de Git -->
+            <!-- Uso de Git-->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingFourteen">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
@@ -381,22 +381,36 @@
                 <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         Git es un sistema de control de versiones distribuido que permite gestionar el historial de cambios en un proyecto. Usar Git facilita la colaboración y el mantenimiento del código a lo largo del tiempo.
+                        Se puede utilizar junto con Github.
 
-                        <p><strong>Ejemplo de comandos básicos:</strong></p>
-                        <pre><code>
-                        # Inicializar un nuevo repositorio
-                        git init
+    <p><strong>Ejemplo de comandos básicos:</strong></p>
+    <pre><code>
+    # Inicializar un nuevo repositorio
+    git init
 
-                        # Añadir archivos al área de preparación
-                        git add archivo.txt
+    # Agregar un repositorio remoto a un repositorio local existente.
+    # Este comando se usa para conectar tu repositorio local con un repositorio en GitHub o en otro servidor.
+    # "origin" es el nombre por defecto para el repositorio remoto.
+    git remote add origin https://github.com/usuario/repo.git
 
-                        # Realizar un commit
-                        git commit -m "Mensaje del commit"
+    # Clonar un repositorio existente.
+    # Este comando se usa para hacer una copia completa de un repositorio que ya existe en GitHub
+    # y crear un repositorio local en tu máquina con toda su historia.
+    git clone https://github.com/usuario/repositorio.git
 
-                        # Clonar un repositorio existente
-                        git clone https://github.com/usuario/repositorio.git
-                        </code></pre>
-                        <p>Estos comandos te permiten comenzar a usar Git, gestionar tus archivos y colaborar en proyectos con otros desarrolladores.</p>
+    # Añadir archivos al área de preparación.
+    git add archivo.txt
+
+    # Realizar un commit.
+    git commit -m "Mensaje del commit"
+
+    # Subir cambios a la rama main en GitHub.
+    # Después de haber agregado el repositorio remoto con "git remote add" o clonado el repositorio,
+    # puedes subir (push) tus cambios a este repositorio en GitHub.
+    git push origin main
+    </code></pre>
+    <p>Estos comandos te permiten comenzar a usar Git, gestionar tus archivos y colaborar en proyectos con otros desarrolladores.</p>
+    <p>Más detalles de Git <a href="https://git-scm.com/docs" target="_blank" rel="noopener noreferrer">aquí</a>.</p>
                     </div>
                 </div>
             </div>
