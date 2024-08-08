@@ -15,66 +15,216 @@
         <p>Bienvenidos al bootcamp de desarrollo web fullstack. En esta guía, exploraremos aspectos esenciales sobre accesibilidad, organización de proyectos web y soluciones a problemas comunes. Esta información es crucial para desarrollar proyectos web efectivos y accesibles.</p>
         
         <h2>Temas Cubiertos</h2>
+        
         <div class="accordion" id="accordionExample">
+
             <!-- Accesibilidad en la Web -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Accesibilidad en la Web
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        La accesibilidad web se refiere a la práctica de diseñar y desarrollar sitios web que sean utilizables por personas con diversas discapacidades. Esto incluye a personas con discapacidades visuales, auditivas, motoras o cognitivas. Implementar buenas prácticas de accesibilidad no solo ayuda a usuarios con discapacidades, sino que también mejora la experiencia de todos los usuarios.
+                        
+                        La accesibilidad web se refiere a la práctica de diseñar y desarrollar sitios web de
+                        manera que sean accesibles y utilizables para todas las personas. Es decir que todas las
+                        personas, más allá de ciertas limitaciones, puedan entender, percibir, navegar e
+                        interactuar con la web, tanto en su estructura como en sus contenidos. En este sentido, la
+                        accesibilidad web implica eliminar barreras y obstáculos que impidan el acceso a la
+                        información en la web, a través del cumplimiento de reglas.
 
-                        <p><strong>Ejemplo de código:</strong></p>
-                        <pre><code>&lt;button aria-label="Cerrar" onclick="cerrarVentana()"&gt;X&lt;/button&gt;</code></pre>
-                        <p>El atributo <code>aria-label</code> proporciona una descripción accesible para el botón que no tiene texto visible.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Atributo alt -->
+            <!-- W3C -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        El Atributo alt
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Reglas de la W3C
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        El atributo <code>alt</code> en una etiqueta <code>&lt;img&gt;</code> proporciona una descripción alternativa de la imagen que se mostrará si la imagen no se puede cargar. Además, esta descripción es leída por lectores de pantalla para usuarios con discapacidad visual.
+                        Las reglas para el cumplimiento de la accesibilidad web, principalmente, han sido establecidas 
+                        por la W3C (WWW Web Wide Web Consortium), un consorcio internacional dedicado a establecer 
+                        estándares y pautas técnicas para el desarrollo y evolución de la World Wide Web (WWW), el cual fue
+                        lanzado por en 1999 por Tim Berners, donde surgió la primera guía sobre accesibilidad
+                        web, denominada WCAG 1.0 (Web Content Accessibility Guide), con una serie de 65
+                        recomendaciones sobre accesibilidad dirigidas a los desarrolladores web y su sitio
+                        oficial de referencia es <a href="http://w3.org">w3.org</a>. Las mismas nos orientan sobre cómo una persona con
+                        discapacidad y los adultos mayores ven la web actual y cómo debería ser diseñada una
+                        página web y sus contenidos para que todos podamos acceder y comprender.
+                    </div>
+                </div>
+            </div>
 
-                        <p><strong>Ejemplo de código:</strong></p>
-                        <pre><code>&lt;img src="logo.png" alt="Logo de la empresa" /&gt;</code></pre>
-                        <p>En este ejemplo, si la imagen "logo.png" no se carga, el texto "Logo de la empresa" será mostrado como alternativa.</p>
+            <!-- WCAG -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        ¿Qué es la WCAG?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Es la guía sobre accesibilidad web (Web Content Accessibility Guide).
+                        La WCAG define cómo crear contenido web más accesible para las personas con discapacidad.
+                        Existen varias versiones de esta guía, a medida que pasa el tiempo se van trabajando en base
+                        a las recomendaciones anteriores, este desarrollo pasa a una especie de 
+                        borrador público para que en un futuro se pueda publicar como una guía definitiva.
+                        Seguir estas definiciones o pautas permite crear un contenido más accesible para un mayor número de 
+                        personas con discapacidad, incluyendo ceguera y baja visión. Estas pautas también ayudan a que el 
+                        nivel de usabilidad del contenido se incremente.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guía WCAG 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        Guía WCAG 2
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        El 5 de octubre de 2023, después de un proceso de varios años, se ha publicado la recomendación de la nueva versión de las <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.2</a>.
+
+    <p>Se añaden 9 criterios nuevos, uno de ellos es:</p>
+    
+    <p><strong>Focus Not Obscured (Minimum):</strong></p>
+    
+    <p>Cuando un componente de la interfaz de usuario recibe el foco de teclado, el componente no puede estar completamente oculto por un contenido creado por el autor. Los ejemplos más habituales de contenidos que se superponen a un elemento con el foco son los pies y encabezados fijos o las capas no modales, por ejemplo, la capa de aceptación de cookies.</p>
+    
+    <p>Más detalles <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html" target="_blank" rel="noopener noreferrer">aquí</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Definición de ARIA -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        ¿Qué es ARIA?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        ARIA es una especificación técnica desarrollada por el W3C. Su nombre completo es WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications). 
+                        Esta especificación establece un conjunto de atributos que los desarrolladores pueden usar para mejorar la accesibilidad de las 
+                        aplicaciones y contenido web dinámico, especialmente para personas que utilizan tecnologías de asistencia como lectores de pantalla.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elementos de ARIA -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                        ¿Cómo se utiliza ARIA?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+    <p>Los atributos ARIA ayudan a mejorar la accesibilidad de los elementos en una página web. A continuación, se presentan los principales componentes de ARIA y algunos ejemplos de uso:</p>
+    <ol>
+        <li>
+            <p><strong>Roles:</strong> Describen el tipo de elemento de la interfaz de usuario, como botones, menús o formularios.</p>
+            <pre><code>&lt;div role="button"&gt;Haga clic aquí&lt;/div&gt;</code></pre>
+        </li>
+        <li>
+            <p><strong>Propiedades:</strong> Proporcionan información adicional sobre el estado o características de un elemento.</p>
+            <pre><code>&lt;input type="checkbox" aria-checked="false"&gt;</code></pre>
+        </li>
+        <li>
+            <p><strong>Estados:</strong> Indican cambios dinámicos en la interfaz de usuario que las tecnologías de asistencia deben conocer.</p>
+            <pre><code>&lt;button aria-expanded="true"&gt;Mostrar más&lt;/button&gt;</code></pre>
+        </li>
+    </ol>
+
+    <p><strong>Ejemplos de uso de ARIA:</strong></p>
+    
+    <ol>
+        <li>
+            <p><strong>Formulario accesible:</strong></p>
+            <pre><code>&lt;form&gt;
+  &lt;label for="username"&gt;Nombre de usuario:&lt;/label&gt;
+  &lt;input type="text" id="username" aria-required="true"&gt;
+  
+  &lt;label for="password"&gt;Contraseña:&lt;/label&gt;
+  &lt;input type="password" id="password" aria-required="true"&gt;
+  
+  &lt;button type="submit" aria-label="Enviar formulario"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </li>
+        <li>
+            <p><strong>Mensajes de error accesibles:</strong></p>
+            <pre><code>&lt;input type="email" id="email" aria-describedby="email-error"&gt;
+&lt;span id="email-error" aria-live="polite"&gt;Por favor, ingrese un email válido.&lt;/span&gt;</code></pre>
+        </li>
+    </ol>
+                    </div>
+            </div>
+
+            <!-- Atributo alt -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        El Atributo alt
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        El atributo <code>alt</code> en una etiqueta <code>&lt;img&gt;</code> proporciona una descripción alternativa de la imagen que se mostrará si la imagen no se puede cargar. Además, esta descripción es leída por lectores de pantalla para usuarios con discapacidad visual.
+            
+                        <p><strong>Ejemplos de código:</strong></p>
+                        <ul>
+                            <li>
+                                <p><strong>Imagen de una persona de perfil:</strong></p>
+                                <pre><code>&lt;img src="perfil-mujer-sonriente-cabello-castano.jpg" alt="Retrato de una mujer sonriente con cabello castaño claro, usando una blusa azul" /&gt;</code></pre>
+                                <p>En este ejemplo, si la imagen no se carga, el texto "Retrato de una mujer sonriente con cabello castaño claro, usando una blusa azul" será mostrado como alternativa.</p>
+                            </li>
+                            <li>
+                                <p><strong>Imagen de un plato de comida en una tienda online:</strong></p>
+                                <pre><code>&lt;img src="plato-pasta-salsa-tomate-albahaca.jpg" alt="Plato de pasta con salsa de tomate y albahaca, servido en un plato blanco" /&gt;</code></pre>
+                                <p>En este ejemplo, si la imagen no se carga, el texto "Plato de pasta con salsa de tomate y albahaca, servido en un plato blanco" será mostrado como alternativa.</p>
+                            </li>
+                            <li>
+                                <p><strong>Imagen de una prenda de vestir publicada en una tienda online:</strong></p>
+                                <pre><code>&lt;img src="camisa-algodon-blanca.jpg" alt="Camisa de algodón blanca con botones, con cuello en forma de V" /&gt;</code></pre>
+                                <p>En este ejemplo, si la imagen no se carga, el texto "Camisa de algodón blanca con botones, con cuello en forma de V" será mostrado como alternativa.</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
             <!-- Organización de carpetas para proyecto -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                         Organización de Carpetas para Proyecto
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         Mantener una estructura de carpetas organizada es esencial para el desarrollo web eficiente. Una estructura clara facilita el mantenimiento y la colaboración en proyectos. A continuación se muestra una estructura de carpetas recomendada:
 
-                        <p><strong>Ejemplo de estructura de carpetas:</strong></p>
+                        <p><strong>Ejemplo de estructura de carpetas básica:</strong></p>
                         <pre><code>
-                        proyecto/
-                        ├── index.html
-                        ├── css/
-                        │   └── styles.css
-                        ├── js/
-                        │   └── scripts.js
-                        ├── img/
-                        │   └── logo.png
-                        └── fonts/
-                            └── custom-font.ttf
+    proyecto/
+    ├── index.html
+    ├── css/
+    │   └── styles.css
+    ├── js/
+    │   └── scripts.js
+    ├── img/
+    │   └── logo.png
+    └── fonts/
+        └── custom-font.ttf
                         </code></pre>
                         <p>En este ejemplo, <code>css/</code> contiene los archivos de estilos, <code>js/</code> los archivos de JavaScript, <code>img/</code> las imágenes, y <code>fonts/</code> las fuentes personalizadas.</p>
                     </div>
@@ -83,28 +233,28 @@
 
             <!-- Importancia de Contrastres -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <h2 class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                         Importancia de los Contrastres
                     </button>
                 </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         Los contrastes adecuados entre texto y fondo son esenciales para la legibilidad y la accesibilidad. Un contraste insuficiente puede dificultar la lectura para personas con deficiencias visuales y otros problemas de visión.
 
                         <p><strong>Ejemplo de código:</strong></p>
                         <pre><code>
-                        /* Fondo oscuro con texto claro */
-                        body {
-                            background-color: #333;
-                            color: #f9f9f9;
-                        }
+    /* Fondo oscuro con texto claro */
+    body {
+        background-color: #333;
+        color: #f9f9f9;
+    }
 
-                        /* Fondo claro con texto oscuro */
-                        header {
-                            background-color: #f9f9f9;
-                            color: #333;
-                        }
+    /* Fondo claro con texto oscuro */
+    header {
+        background-color: #f9f9f9;
+        color: #333;
+    }
                         </code></pre>
                         <p>En el ejemplo, se utiliza un fondo oscuro con texto claro para mejorar la legibilidad en la mayoría de las situaciones. Es importante verificar el contraste con herramientas de validación de accesibilidad.</p>
                     </div>
@@ -113,41 +263,43 @@
 
             <!-- Importancia del uso de un lector -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <h2 class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
                         Importancia del Uso de un Lector de Pantalla (Ej. NVDA)
                     </button>
                 </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        Los lectores de pantalla como NVDA (NonVisual Desktop Access) permiten a personas con discapacidades visuales navegar por la web leyendo el contenido en voz alta. Es fundamental probar los sitios web con lectores de pantalla para asegurar que la información se presenta de manera accesible.
+                        Los lectores de pantalla, como NVDA (NonVisual Desktop Access), permiten a personas con discapacidad visual navegar por la web leyendo el contenido en voz alta. Es fundamental probar los sitios web con lectores de pantalla para asegurar que la información se presenta de manera accesible.
 
                         <p><strong>Ejemplo de prueba:</strong></p>
-                        <p>Usa NVDA o cualquier otro lector de pantalla para verificar que todos los elementos interactivos como botones y enlaces sean descritos correctamente y que el contenido sea legible.</p>
+                        <p>Usa NVDA o cualquier otro lector de pantalla para verificar que todos los elementos interactivos, como botones y enlaces, sean descritos correctamente y que el contenido sea legible. También puedes usar la tecla <kbd>Tab</kbd> para navegar entre los elementos interactivos y asegurarte de que el enfoque sea claro y accesible.</p>
+
+                        <p>Para descargar NVDA, visita el siguiente enlace: <a href="https://nvda.es/descargas/descarga-de-nvda/" target="_blank" rel="noopener noreferrer">Descarga de NVDA</a></p>
                     </div>
                 </div>
             </div>
 
             <!-- Uso de JavaScript para validar formularios -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <h2 class="accordion-header" id="headingEleven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
                         Uso de JavaScript para Validar Datos de Formularios
                     </button>
                 </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         JavaScript se utiliza para validar datos de formularios antes de que sean enviados al servidor. Esto mejora la experiencia del usuario al proporcionar retroalimentación instantánea sobre errores en el formulario.
 
                         <p><strong>Ejemplo de código:</strong></p>
                         <pre><code>
-                        document.getElementById('miFormulario').addEventListener('submit', function(event) {
-                            let nombre = document.getElementById('nombre').value;
-                            if (nombre === '') {
-                                alert('El nombre es obligatorio.');
-                                event.preventDefault(); // Evita que el formulario se envíe
-                            }
-                        });
+    document.getElementById('miFormulario').addEventListener('submit', function(event) {
+        let nombre = document.getElementById('nombre').value;
+        if (nombre === '') {
+            alert('El nombre es obligatorio.');
+            event.preventDefault(); // Evita que el formulario se envíe
+        }
+    });
                         </code></pre>
                         <p>En este ejemplo, el formulario no se enviará si el campo "nombre" está vacío, y el usuario verá una alerta.</p>
                     </div>
@@ -156,12 +308,12 @@
 
             <!-- Uso de etiquetas semánticas HTML5 -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSeven">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                <h2 class="accordion-header" id="headingTwelve">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
                         Uso de Etiquetas Semánticas en HTML5
                     </button>
                 </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         Las etiquetas semánticas en HTML5 (como <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, y <code>&lt;section&gt;</code>) proporcionan significado adicional al contenido de la página, lo que mejora la accesibilidad y el SEO.
 
@@ -195,12 +347,12 @@
 
             <!-- Uso de Bootstrap -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingEight">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                <h2 class="accordion-header" id="headingThirteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
                         Uso de Bootstrap
                     </button>
                 </h2>
-                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         Bootstrap es un framework CSS que facilita el diseño de páginas web responsivas y con un aspecto profesional. Ofrece una amplia gama de componentes y utilidades para estilizar y estructurar tu sitio web de manera rápida y eficiente.
 
@@ -221,12 +373,12 @@
 
             <!-- Uso de Git -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingNine">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                <h2 class="accordion-header" id="headingFourteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
                         Uso de Git
                     </button>
                 </h2>
-                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         Git es un sistema de control de versiones distribuido que permite gestionar el historial de cambios en un proyecto. Usar Git facilita la colaboración y el mantenimiento del código a lo largo del tiempo.
 
@@ -245,6 +397,24 @@
                         git clone https://github.com/usuario/repositorio.git
                         </code></pre>
                         <p>Estos comandos te permiten comenzar a usar Git, gestionar tus archivos y colaborar en proyectos con otros desarrolladores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desarrollo de Software -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFifteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                        Desarrollo de Software
+                    </button>
+                </h2>
+                <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Existe una gran importancia en la filosofía de <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_centrado_en_el_usuario#:~:text=El%20Dise%C3%B1o%20Centrado%20en%20el,m%C3%ADnimo%20esfuerzo%20de%20su%20parte" target="_blank" rel="noopener noreferrer">Diseño Centrado en el Usuario</a>, que permite un marco metodológico apropiado para abordar la accesibilidad y usabilidad desde el inicio.
+
+                        <p>"La accesibilidad, al igual que la usabilidad, son cualidades relacionadas con el software que deben complementarse, tratarse y abordarse desde las etapas iniciales del desarrollo. No son sinónimos, pero tampoco son conceptos independientes. La usabilidad afecta e incide directamente en la experiencia del usuario, mientras que la accesibilidad permite que esa experiencia se lleve a cabo. La accesibilidad puede delimitar los contenidos y funcionalidades que se transmiten, más allá de cuán usables sean." — <cite>Accesibilidad web - Una mirada integral (2020)</cite></p>
+                    
+                        <p>Para más información, visite: <a href="https://sedici.unlp.edu.ar/bitstream/handle/10915/105786/Documento_completo.pdf-PDFA.pdf?sequence=1&isAllowed=y" target="_blank" rel="noopener noreferrer">Accesibilidad web - Una mirada integral</a></p>
                     </div>
                 </div>
             </div>
