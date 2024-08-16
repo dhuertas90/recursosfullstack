@@ -168,7 +168,7 @@
     </ol>
                     </div>
             </div>
-
+            </div>
             <!-- Atributo alt -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingSeven">
@@ -291,7 +291,7 @@
                     <div class="accordion-body">
                         JavaScript se utiliza para validar datos de formularios antes de que sean enviados al servidor. Esto mejora la experiencia del usuario al proporcionar retroalimentación instantánea sobre errores en el formulario.
 
-                        <p><strong>Ejemplo de código:</strong></p>
+                        <p><strong>Ejemplo de código 1:</strong></p>
                         <pre><code>
     document.getElementById('miFormulario').addEventListener('submit', function(event) {
         let nombre = document.getElementById('nombre').value;
@@ -300,6 +300,51 @@
             event.preventDefault(); // Evita que el formulario se envíe
         }
     });
+                        </code></pre>
+
+                        <p>En este ejemplo, el formulario no se enviará si el campo "nombre" está vacío, y el usuario verá una alerta.</p>
+                        <p><strong>Ejemplo de código 2:</strong></p>
+                        <pre><code>
+    &lt;form id=&quot;formulario&quot;&gt;
+        &lt;label for=&quot;nombreInput&quot;&gt;Nombre:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;nombreInput&quot; placeholder=&quot;Ingresá solo letras&quot; aria-describedby=&quot;nombreError&quot; oninput=&quot;validarNombre()&quot; required&gt;
+        &lt;span id=&quot;nombreError&quot; style=&quot;color: red; display: none;&quot; aria-live=&quot;polite&quot;&gt;❌ No se permiten números ni espacios en blanco.&lt;/span&gt;
+        &lt;br&gt;
+        &lt;label for=&quot;emailInput&quot;&gt;Email:&lt;/label&gt;
+        &lt;input type=&quot;email&quot; id=&quot;emailInput&quot; placeholder=&quot;Ingresá tu email&quot; required&gt;
+        &lt;br&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+    &lt;/form&gt;
+    
+    &lt;script&gt;
+        function validarNombre() {
+            var nombre = document.getElementById('nombreInput').value;
+            var nombreError = document.getElementById('nombreError');
+            
+            // Verifica si el nombre contiene números o solo espacios en blanco
+            if (/\d/.test(nombre) || /^\s*$/.test(nombre)) {
+                nombreError.style.display = 'inline';
+            } else {
+                nombreError.style.display = 'none';
+            }
+        }
+    
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            var nombre = document.getElementById('nombreInput').value;
+            var email = document.getElementById('emailInput').value;
+    
+            // Verifica si el nombre contiene números o solo espacios en blanco
+            if (/\d/.test(nombre) || /^\s*$/.test(nombre)) {
+                event.preventDefault();  // Evita el envío del formulario
+                alert('El campo nombre no puede contener números ni estar compuesto solo por espacios en blanco.');
+            } else if (email === '') {
+                event.preventDefault();  // Evita el envío del formulario
+                alert('El campo email es obligatorio.');
+            } else {
+                alert('Formulario enviado correctamente.');
+            }
+        });
+    &lt;/script&gt;
                         </code></pre>
                         <p>En este ejemplo, el formulario no se enviará si el campo "nombre" está vacío, y el usuario verá una alerta.</p>
                     </div>
