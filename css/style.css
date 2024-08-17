@@ -1,16 +1,52 @@
-.accordion-body {
-    display:block;
+/* Tema Claro (inicial) */
+body {
+    background-color: #ffffff;
+    color: #333333;
 }
 
-/* Estilos personalizados para el footer */
-.footer-logo {
-    font-size: 24px;
+/* Estilos para los elementos del tema claro */
+.accordion-button {
+    background-color: #f8f9fa;
     color: #333;
 }
+
+.accordion-body,
+header,
+.footer {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.footer-logo {
+    color: #333;
+}
+
 .footer-logo:hover {
     color: #007bff;
 }
-.footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
+
+/* Tema Oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .accordion-button {
+    background-color: #333;
+    color: #ffffff;
+}
+
+body.dark-mode .accordion-body,
+body.dark-mode header,
+body.dark-mode .footer {
+    background-color: #d3d3d3;
+    color: #000000;
+}
+
+body.dark-mode .footer-logo {
+    color: #000000;
+}
+
+body.dark-mode .footer-logo:hover {
+    color: #007bff;
 }
