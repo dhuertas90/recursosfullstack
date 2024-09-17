@@ -469,6 +469,79 @@
                 </div>
             </div>
 
+            <!-- Trabajo con ramas en Git -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingBranches">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBranches" aria-expanded="false" aria-controls="collapseBranches">
+            Trabajo con ramas en Git
+        </button>
+    </h2>
+    <div id="collapseBranches" class="accordion-collapse collapse" aria-labelledby="headingBranches" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>Git permite trabajar con ramas, lo que facilita que varias personas colaboren en un mismo proyecto sin afectar el código principal. Cada integrante puede trabajar en su propia rama y luego integrar los cambios en una rama de desarrollo común, como <code>development</code>, y finalmente en <code>main</code>.</p>
+
+            <p><strong>Pasos básicos para colaborar con ramas:</strong></p>
+            <pre><code>
+Ejemplo: 
+- Equipo conformado por Manuel y Natalia.
+- El proyecto estará en el Github de Natalia.
+
+Manuel debe hacer los siguientes pasos:
+
+0. Natalia debe permitir la colaboración, añadiendo permisos en GitHub, para que Manuel pueda modificar el repositorio.
+https://docs.github.com/es/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository
+
+1. Clonar el repositorio (si aún no lo has hecho)
+git clone https://github.com/usuario/repo.git
+
+2. Crear una nueva rama para trabajar
+git checkout -b mi-rama
+
+3. Hacer los cambios en tu rama
+git add .
+git commit -m "Mensaje de los cambios"
+
+4. Subir los cambios a tu rama en el repositorio remoto
+git push origin mi-rama
+
+5. Luego, en la rama development, ambos pueden integrar sus cambios:
+git checkout development
+git pull origin development
+
+6. Fusionar los cambios de tu rama en development
+git merge mi-rama
+
+7. Subir los cambios a la rama development
+git push origin development
+
+8. Cuando los cambios estén listos y revisados, se puede fusionar en main:
+git checkout main
+git pull origin main
+git merge development
+git push origin main
+            </code></pre>
+            <p><strong>Descripción de la jerarquía de ramas</strong></p>
+            <ul>
+                <li><strong>main</strong>: Es la rama principal y estable del proyecto. Contiene el código que se ha revisado y que está listo para producción.</li>
+                <li><strong>development</strong>: Esta es la rama en la que se integran los cambios de las diferentes ramas de trabajo antes de fusionarlos en main. Es la rama de desarrollo, que puede tener código aún en pruebas.</li>
+                <li><strong>mi-rama</strong> (ejemplo): Cada colaborador trabaja en su propia rama individual (por ejemplo, mi-rama). Estas ramas se crean desde development y se fusionan en development cuando los cambios están listos.</li>
+            </ul>
+            <p>Este flujo de trabajo permite que ambos integrantes trabajen en paralelo, cada uno en su propia rama, sin conflictos, y luego fusionen sus cambios de forma ordenada en <code>development</code> y <code>main</code>.</p>
+            <pre><code>
+                main
+                |
+                |---------------------> development
+                                           |           
+                     ----------------------|-------------------
+                     |                      |                  |
+                  mi-rama                mi-rama2           otras ramas
+             </>
+            </code></pre>
+            <p>Más detalles sobre ramas en Git (Video recomendado) <a href="https://www.youtube.com/watch?v=tFr0Vg1q9Eg" target="_blank" rel="noopener noreferrer">aquí</a>.</p>
+        </div>
+    </div>
+</div>
+
             <!-- Desarrollo de Software -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingFifteen">
